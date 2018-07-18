@@ -1,31 +1,52 @@
 var clickedCount = 0;
 
 $(document).ready(function (){
+
     $("#profileContent").hide();
     $("#musicContent").hide();
     $("#writingContent").hide();
     $("#programmingContent").hide();
     $("#contactContent").hide();
+
     //clicks for images
+
     $("img").on("click", function() {
 
     if (this.alt!=="logo" && clickedCount==0) {
         this.clicked = true;
         console.log(this.clicked);
-        $("#" +this.alt+ "Content").fadeIn(3000);
+        //bring in content
+        $("#" +this.alt+ "Content").fadeIn(2500);
+        //img animate
         $(this).animate({
             'marginTop' : "-=90px"
             },1000);
+        //keeps count so only one content loaded
         clickedCount++;
         }
 
-    else if (this.clicked===true && this.alt!=="logo"){
+    else if (this.alt!=="logo" && clickedCount>0 && this.clicked!==true) {
+            this.clicked = true;
+            console.log(this.clicked);
+            //bring in content
+            $("#" +this.alt+ "Content").fadeIn(2500);
+            //img animate
+            $(this).animate({
+                'marginTop' : "-=90px"
+                },1000);
+            //keeps count so only one content loaded
+            clickedCount++;
+            }
 
+    else if (this.clicked===true && this.alt!=="logo" ){
         this.clicked = false;
-        $("#" +this.alt+ "Content").fadeOut(2600);
+        //bring out content
+        $("#" +this.alt+ "Content").fadeOut(1900);
+        //animation
         $(this).animate({
             'marginTop' : "+=90px"
             },1000);
+        //brings down count so others can click
         clickedCount--;
     }
     });
