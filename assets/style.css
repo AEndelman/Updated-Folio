@@ -1,0 +1,79 @@
+#name{
+    top: 0;
+    margin-top: 0;
+    margin-bottom:70px;
+    margin-left:450px;
+    width: auto;
+    height: 400px;
+    padding: 20px;    
+}
+
+.fullSection{
+    width: 100%;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 100px;
+
+}
+
+.icons{
+    float: left;
+    padding: 55px;
+    position: relative;
+}
+
+.icons:hover {
+    position: relative;
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.6s; 
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite; 
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+#profileContent{
+    background-color: white;
+    height: 700px;
+    width: auto;
+    margin: 100px;
+    clear: both;
+}
+#musicContent{
+    background-color: white;
+    height: 700px;
+    width: auto;
+    margin: 100px;
+    clear: both;
+}
+#writingContent{
+    background-color: white;
+    height: 700px;
+    width: auto;
+    margin: 100px;
+    clear: both;
+}
+#programmingContent{
+    background-color: white;
+    height: 700px;
+    width: auto;
+    margin: 100px;
+    clear: both;
+}
+#contactContent{
+    background-color: white;
+    height: 700px;
+    width: auto;
+    margin: 100px;
+    clear: both;
+}
+body {
+    background-image: url("images/fabric_of_squares_gray.png");
+}
