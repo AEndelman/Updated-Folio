@@ -72,7 +72,7 @@
 
 #writingContent{
     background-color: white;
-    height: auto%;
+    height: auto;
     width: auto;
     margin: 100px;
     clear: both;
@@ -83,13 +83,20 @@
 
 #programmingContent{
     background-color: white;
-    height: auto;
+    height: 1200px;
     width: auto;
     margin: 100px;
     clear: both;
     border-radius: 4px;
     padding: 25px;
     border: 2px solid white;
+}
+
+.devPics{
+    width: 450px;
+    height: 450px;
+    padding: 50px;
+    float: left;
 }
 
 #contactContent{
