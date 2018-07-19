@@ -25,7 +25,7 @@ $(document).ready(function (){
         clickedCount++;
         }
 
-    else if (this.alt!=="logo" && clickedCount>0 && this.clicked!==true) {
+    else if (this.alt!=="logo" && clickedCount>0 && this.clicked!==true && this.alt!=="devPic") {
             this.clicked = true;
             console.log(this.clicked);
             //bring in content
