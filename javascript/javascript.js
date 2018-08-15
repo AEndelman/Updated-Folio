@@ -23,12 +23,14 @@ $(document).ready(function (){
             },1000);
         //keeps count so only one content loaded
         clickedCount++;
+        window.location.href = ("#" +this.alt+ "Content");
         }
 
     else if (this.alt!=="logo" && clickedCount>0 && this.clicked!==true && this.alt!=="devPic") {
             this.clicked = true;
             console.log(this.clicked);
             //bring in content
+            
             $("#" +this.alt+ "Content").fadeIn(2500);
             //img animate
             $(this).animate({
