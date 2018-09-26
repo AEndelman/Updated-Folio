@@ -23,7 +23,10 @@ $(document).ready(function (){
             },1000);
         //keeps count so only one content loaded
         clickedCount++;
-        window.location.href = ("#" +this.alt+ "Content");
+        $('html, body').animate({
+            scrollTop: $("#" +this.alt+ "Content").offset().top
+        }, 500);
+        // window.location.href = ("#" +this.alt+ "Content");
         }
 
     else if (this.alt!=="logo" && clickedCount>0 && this.clicked!==true && this.alt!=="devPic") {
@@ -38,6 +41,9 @@ $(document).ready(function (){
                 },1000);
             //keeps count so only one content loaded
             clickedCount++;
+            $('html, body').animate({
+                scrollTop: $("#" +this.alt+ "Content").offset().top
+            }, 500);
             }
 
     else if (this.clicked===true && this.alt!=="logo" ){
@@ -53,3 +59,19 @@ $(document).ready(function (){
     }
     });
 });
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 50) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
